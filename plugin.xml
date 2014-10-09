@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.vishwauddanti.cordova.core.myPlugin"
+    version="0.1.0">
+
+    <name>UploadFiles</name>
+    <description>Cordova Plugin Sekelton</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugin</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UploadFile">
+                <param name="ios-package" value="UploadFiles"/>
+            </feature>
+        </config-file>
+
+        <js-module src="www/uploadFiles.js" name="uploadFiles">
+            <clobbers target="myPlugin" />
+        </js-module>
+
+        <header-file src="src/ios/UploadFiles.h" />
+        <source-file src="src/ios/UploadFiles.m" />
+        
+    </platform>
+
+
+</plugin>
